@@ -1,12 +1,15 @@
 
 import React, { useState } from 'react';
 
+// Kullanıcının girdiği metni tutmak için state kullanıyoruz.
 const CharacterSearch = ({ onSearch }) => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const handleSearch = () => {
         onSearch(searchTerm);
     };
+
+    // Klavye üzerinden "Enter" tuşuna basılınca arama işlemi yapma özelliği eklendi
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {

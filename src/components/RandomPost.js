@@ -6,12 +6,16 @@ const RandomPost = () => {
     const [postData, setPostData] = useState(null);
     const [error, setError] = useState(null);
 
+    // Hata yönetimi için try-catch bloğu
     useEffect(() => {
         const fetchData = async () => {
             try {
+                // axios kütüphanesi ile API'den veri çekiyoruz.
                 const response = await axios.get('https://jsonplaceholder.typicode.com/posts/1');
                 setPostData(response.data);
             } catch (error) {
+                // Hata durumunda, kullanıcıya anlamlı bir hata mesajı gösteriyoruz.
+
                 setError('Something went wrong');
             }
         };
