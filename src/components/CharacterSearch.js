@@ -1,4 +1,4 @@
-// CharacterSearch.js
+
 import React, { useState } from 'react';
 
 const CharacterSearch = ({ onSearch }) => {
@@ -8,10 +8,28 @@ const CharacterSearch = ({ onSearch }) => {
         onSearch(searchTerm);
     };
 
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            handleSearch();
+        }
+    };
+
     return (
-        <div>
-            <input type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-            <button onClick={handleSearch}>Search</button>
+        <div className="mb-4">
+            <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                onKeyDown={handleKeyDown}
+                className="border p-2 mr-2"
+                placeholder="Search characters..."
+            />
+            <button
+                onClick={handleSearch}
+                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+                Search
+            </button>
         </div>
     );
 };

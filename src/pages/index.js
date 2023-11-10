@@ -1,4 +1,4 @@
-// pages/index.js
+
 import React, { useState, useEffect } from 'react';
 import CharacterSearch from '../components/CharacterSearch';
 import CharacterCard from '../components/CharacterCard';

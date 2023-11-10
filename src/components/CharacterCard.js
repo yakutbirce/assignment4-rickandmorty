@@ -1,4 +1,4 @@
-// components/CharacterCard.js
+
 import React from 'react';
 
 const CharacterCard = ({ character }) => {
