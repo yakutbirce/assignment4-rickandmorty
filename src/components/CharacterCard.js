@@ -1,10 +1,10 @@
 
 import React from 'react';
 
-// filteredCharacters ile map döndüğümüz Card'ı ayrı bir component haline getirin.
+// filteredCharacters ile map döndürülen Card ayrı bir component haline getirildi.
 
 
-// Karakter kartlarını göstermek için ayrı bir bileşen oluşturuyoruz.
+// Karakter kartlarını göstermek için ayrı bir bileşen oluşturuldu.
 const CharacterCard = ({ character }) => {
     return (
         <div className="max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden my-6">

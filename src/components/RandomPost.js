@@ -14,7 +14,7 @@ const RandomPost = () => {
                 const response = await axios.get('https://jsonplaceholder.typicode.com/posts/1');
                 setPostData(response.data);
             } catch (error) {
-                // Hata durumunda, kullanıcıya anlamlı bir hata mesajı gösteriyoruz.
+                // Hata durumunda, kullanıcıya hata mesajı gösteriyoruz.
 
                 setError('Something went wrong');
             }
